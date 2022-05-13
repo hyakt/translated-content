@@ -1,19 +1,19 @@
 ---
-title: CSS Container Queries
+title: CSS コンテナークエリー
 slug: Web/CSS/CSS_Container_Queries
 tags:
   - CSS
-  - CSS Containment
-  - CSS Container Queries
-  - Guide
-  - Paint
-  - Responsive Design
+  - CSS 封じ込め
+  - CSS コンテナークエリー
+  - ガイド
+  - ペイント
+  - レスポンシブデザイン
 ---
 {{CSSRef}}
 
 > **Note:** This document is an explanation of an early stage specification that is attracting a lot of interest from web developers. The examples and syntax below should be seen as an explainer to an evolving specification, in order to encourage experimentation and feedback. Once the specification matures, this will be the location of the full MDN documentation for container queries. Last updated on 15 September 2021 to add details of the new properties `container-type`, `container-name`, and `container`.
 
-## What problem do container queries solve?
+## コンテナークエリーはどのような問題を解決するのか?
 
 When creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) you often use a media query to change the document layout based on the size of the viewport.
 
@@ -29,7 +29,7 @@ This doesn't quite achieve what media queries do for our entire layout however. 
 
 It is this situation that container queries would solve. Instead of looking at the viewport size, we can look at the container size and make our layout adjustments according to the space in the container. And, it looks as if this most frequently requested of web features, is becoming a possibility.
 
-## The container queries proposal
+## コンテナークエリーのプロポーザル
 
 The container queries specification is to become part of {{cssxref("CSS_Containment", "CSS Containment")}}. The initial CSS Containment draft defined the {{cssxref("contain")}} property to allow for performance optimizations. It provides a way for web developers to isolate parts of the DOM and declare to the browser these are independent from the rest of the document.
 
@@ -60,7 +60,7 @@ The `container-type` property can have the following values:
 
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
 
-#### Single-axis containment
+#### 1 軸への封じ込め
 
 Using `container-type: size` indicates to the browser that the size of this area is known in both dimensions.
 
@@ -120,13 +120,13 @@ There are many things to be worked out, however this is the basic concept. The b
 
 You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxde) showing a simple `inline-size` scenario, or [this growing collection of container queries demos](https://codepen.io/collection/XQrgJo).
 
-## Share your feedback
+## ご意見
 
 This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping [a list of open questions](https://css.oddbird.net/rwd/query/explainer/). Issues raised against the feature can be found in [a project](https://github.com/w3c/csswg-drafts/projects/18) on the CSS Working Group GitHub. If you have thoughts on any of these questions, or want to raise something new, please do!
 
 It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.
 
-## Alternatives to container queries
+## コンテナークエリーの代替
 
 Many container query cases can be solved, or at least partially solved, with existing technology. These solutions will remain important even as container queries make it into browsers, as fallbacks for those browsers that don't yet support the spec.
 
@@ -134,7 +134,7 @@ As already discussed, one solution for components that may occupy different loca
 
 Another solution is to rely on grid or flex layout. The component used in my demo could be laid out using flexbox, which would give it some ability to display as one or two columns based on available width. You don't have the ability to make larger layout changes using this method, however in many cases you can achieve an acceptable result. As container queries become available you could maintain the grid or flex version as the fallback for non-supporting browsers.
 
-## See also
+## 他
 
 - [Editor's Draft CSS Containment Level 3](https://drafts.csswg.org/css-contain-3/)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
